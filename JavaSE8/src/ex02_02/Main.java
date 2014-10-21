@@ -13,15 +13,12 @@ import java.util.stream.Stream;
  * @author tohtetsu
  */
 public class Main {
-
+    
     public static void main(String[] args) {
         Stream<String> strings = Stream.of("This", "is", "a", "test", "for", "finding", "words", "!");
-        strings.filter(new Predicate<String>() {
-
-            @Override
-            public boolean test(String t) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        }).count();
+        strings.filter((String t) -> {
+            System.out.println("Filter is called and the element is " + t);
+            return t.length() > 2;
+        }).limit(5).forEach(System.out::println);
     }
 }
