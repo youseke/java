@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ex02_08;
 
 import java.util.Arrays;
@@ -11,16 +6,25 @@ import java.util.stream.Stream;
 
 /**
  *
- * @author Administrator
+ * @author Tohtetsu Choh
  */
 public class Main {
 
     public static void main(String[] args) {
-        List<Double> dList = Arrays.asList(0.0, 0.1, 0.2);
-        System.out.println(sum(dList.stream()));
+        Stream<String> f1= Stream.of("1", "2", "3", "4");
+        Stream<String> f2= Stream.of("1");
+        System.out.println(zip(f1, f2).toString());
     }
 
     public static <T> Stream<T> zip(Stream<T> first, Stream<T> second) {
-        first.
+        while (first.findAny().isPresent()) {
+            if (second.findAny().isPresent()) {
+                second = second.skip(1);
+            } else {
+                return first;
+            }
+            first = first.skip(1);
+        }
+        return second;
     }
 }
