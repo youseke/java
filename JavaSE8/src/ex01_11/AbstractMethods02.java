@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ex01_11;
 
 /**
@@ -21,7 +16,7 @@ public class AbstractMethods02 {
         public abstract void f();
     }
 
-    // ƒI[ƒoƒ‰ƒCƒh‚·‚ê‚ÎA–â‘è‚È‚­À‘•‚Å‚«‚é
+    // ï¿½Iï¿½[ï¿½oï¿½ï¿½ï¿½Cï¿½hï¿½ï¿½ï¿½ï¿½ÎAï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½
     class Test extends S implements J {
 
         @Override

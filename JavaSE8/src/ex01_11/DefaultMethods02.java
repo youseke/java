@@ -6,8 +6,10 @@ package ex01_11;
  */
 public class DefaultMethods02 {
 
-    class  S {
-        // default method‚ğ’è‹`‚Å‚«‚È‚¢
+    class S {
+
+        // default methodï¿½ï¿½ï¿½`ï¿½Å‚ï¿½ï¿½È‚ï¿½
+
         default public void f() {
             throw new UnsupportedOperationException("Not supported yet.");
         }
@@ -20,7 +22,7 @@ public class DefaultMethods02 {
         }
     }
 
-    // ƒRƒ“ƒpƒCƒ‰ƒGƒ‰[‚É‚È‚é
+    // ï¿½Rï¿½ï¿½ï¿½pï¿½Cï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½[ï¿½É‚È‚ï¿½
     class Test extends S implements J {
     }
 }

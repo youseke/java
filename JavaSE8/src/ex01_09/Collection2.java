@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ex01_09;
 
 import java.util.Collection;
@@ -15,7 +10,9 @@ import java.util.function.Predicate;
  * @param <T>
  */
 public interface Collection2<T> extends Collection<T> {
-    // Collection2‚ğÀ‘•‚µ‚½ƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚É—˜—p‚³‚ê‚é‚µ‚©v‚¢•t‚©‚È‚¢‚ªc
+
+    // Collection2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½Xï¿½ÌƒCï¿½ï¿½ï¿½Xï¿½^ï¿½ï¿½ï¿½Xï¿½É—ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½é‚µï¿½ï¿½ï¿½vï¿½ï¿½ï¿½tï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½c
+
     public default void forEachIf(Consumer<T> action, Predicate<T> filter) {
         if (filter.test((T) this))
             action.accept((T) this);

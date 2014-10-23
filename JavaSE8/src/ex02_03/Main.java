@@ -19,7 +19,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         System.out.println("Starting...");
-        String contents = new String(Files.readAllBytes(Paths.get("src\\ex02_03\\alice.txt")), StandardCharsets.UTF_8);
+        String contents = new String(Files.readAllBytes(Paths.get("src\\alice.txt")), StandardCharsets.UTF_8);
         List<String> words = Arrays.asList(contents.split("[\\P{L}]+"));
 
         // words.stream().forEach(System.out::println);

@@ -1,7 +1,5 @@
 package ex01_12;
-
-import java.util.Collection;
 /*
- * ‰º‹L‚Ì‚æ‚¤‚Èƒ\[ƒXƒR[ƒh‚ÍƒRƒ“ƒpƒCƒ‰ƒGƒ‰[‚É‚È‚è‚Ü‚·
+ * ï¿½ï¿½ï¿½Lï¿½Ì‚æ‚¤ï¿½Èƒ\ï¿½[ï¿½Xï¿½Rï¿½[ï¿½hï¿½ÍƒRï¿½ï¿½ï¿½pï¿½Cï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½[ï¿½É‚È‚ï¿½Ü‚ï¿½
  */
 //public interface TestInterface<T> extends Collection<T>, InterfaceWithStreamMethod {}

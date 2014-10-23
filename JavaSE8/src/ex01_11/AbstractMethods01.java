@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ex01_11;
 
 /**
@@ -10,21 +5,24 @@ package ex01_11;
  * @author Tohtetsu Choh
  */
 public class AbstractMethods01 {
-    interface I{
+
+    interface I {
+
         public abstract void f();
     }
-    
-     interface J{
+
+    interface J {
+
         public abstract void f();
     }
-     
-     // ƒI[ƒoƒ‰ƒCƒh‚·‚ê‚ÎA–â‘è‚È‚­À‘•‚Å‚«‚é
-     class Test implements I, J{
+
+    // ï¿½Iï¿½[ï¿½oï¿½ï¿½ï¿½Cï¿½hï¿½ï¿½ï¿½ï¿½ÎAï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½ï¿½
+    class Test implements I, J {
 
         @Override
         public void f() {
-            throw new UnsupportedOperationException("Not supported yet."); 
+            throw new UnsupportedOperationException("Not supported yet.");
         }
-         
-     }
+
+    }
 }

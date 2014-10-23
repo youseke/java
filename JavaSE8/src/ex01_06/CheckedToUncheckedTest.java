@@ -1,7 +1,7 @@
 package ex01_06;
 
 public class CheckedToUncheckedTest {
-    
+
     public static void main(String[] args) {
         new Thread(
                 uncheck(() -> {
@@ -9,7 +9,7 @@ public class CheckedToUncheckedTest {
                     Thread.sleep(1000);
                 })).start();
     }
-    
+
     public static Runnable uncheck(RunnableEx r) {
         return () -> {
             try {
