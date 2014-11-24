@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<BorderPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="BrowserViewController">
+  <center>
+    <WebView fx:id="webView" prefHeight="300.0" prefWidth="600.0" />
+  </center>
+  <stylesheets>
+    <URL value="@browser.css" />
+  </stylesheets>
+  <top>
+    <HBox id="hbox" prefHeight="100.0" prefWidth="200.0">
+      <children>
+        <ImageView id="backImage" onMousePressed="#backward" pickOnBounds="true" preserveRatio="true" />
+        <ImageView id="forwardImage" onMousePressed="#forward" pickOnBounds="true" preserveRatio="true" />
+        <TextField fx:id="urlField" onAction="#load" prefWidth="200.0" />
+      </children>
+    </HBox>
+  </top>
+</BorderPane>
