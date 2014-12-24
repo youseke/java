@@ -21,7 +21,7 @@ public class NewClass extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Image image = new Image("queen-mary.png");
+        Image image = new Image("src/main/resources/bunny.jpg");
         Image finalImage = ParallelLatentImage.from(image)
                 .transform(Color::darker)
                 .transform(Color::grayscale)

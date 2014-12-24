@@ -40,7 +40,7 @@ public class NewClass extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Image image = new Image("queen-mary.png");
+        Image image = new Image("src/main/resources/bunny.jpg");
         Image newImage = transform(image, compose(map(Color::brighter),
                 (x, y, c) -> (x <= 10 || x >= image.getWidth() - 10
                 || y <= 10 || y >= image.getHeight() - 10) ? Color.GREY : c));

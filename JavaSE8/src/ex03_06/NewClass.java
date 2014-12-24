@@ -1,4 +1,4 @@
-package ex03_10;
+package ex03_06;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -9,24 +9,22 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import java.util.function.Function;
-import java.util.function.UnaryOperator;
+import java.util.function.BiFunction;
 
 /**
  *
  * @author Tohtetsu Choh
  */
 public class NewClass extends Application {
-    
-    public static Image transform(Image in, Function<Color, Color> f) {
+
+    public static <T> Image transform(Image in, BiFunction<Color, T, Color> f, T arg) {
         int width = (int) in.getWidth();
         int height = (int) in.getHeight();
-        WritableImage out = new WritableImage(
-                width, height);
+        WritableImage out = new WritableImage(width, height);
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 out.getPixelWriter().setColor(x, y,
-                        f.apply(in.getPixelReader().getColor(x, y)));
+                        f.apply(in.getPixelReader().getColor(x, y), arg));
             }
         }
         return out;
@@ -35,9 +33,10 @@ public class NewClass extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Image image = new Image("src/main/resources/bunny.jpg");
-        Image newImage = transform(image, ((UnaryOperator<Color>) Color::brighter).compose(Color::grayscale));
+        Image newImage = transform(image,
+                (c, factor) -> c.deriveColor(0, 1, factor, 1), 1.5
+        );
         stage.setScene(new Scene(new HBox(new ImageView(image), new ImageView(newImage))));
         stage.show();
     }
-
 }

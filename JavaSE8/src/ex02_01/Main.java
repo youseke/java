@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         long[] count = {0, 0};
         System.out.println("Starting...");
-        String contents = new String(Files.readAllBytes(Paths.get("src\\alice.txt")), StandardCharsets.UTF_8);
+        String contents = new String(Files.readAllBytes(Paths.get("src/main/resources/alice.txt")), StandardCharsets.UTF_8);
         List<String> words = Arrays.asList(contents.split("[\\P{L}]+"));
         for (String w : words) {
             new Thread(() -> {

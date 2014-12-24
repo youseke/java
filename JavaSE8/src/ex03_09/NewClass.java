@@ -42,6 +42,7 @@ public class NewClass {
             this.firstName = firstName;
         }
 
+        @Override
         public String toString() {
             return firstName + " " + lastName;
         }

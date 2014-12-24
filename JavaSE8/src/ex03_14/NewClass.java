@@ -19,7 +19,7 @@ public class NewClass extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Image image = new Image("queen-mary.png");
+            Image image = new Image("src/main/resources/bunny.jpg");
             Image finalImage = HighlyEnhancedLatentImage.from(image)
                     .transform(Color::brighter)
                     .transform(blur())
