@@ -2,7 +2,6 @@ package ex03_24;
 
 import ex03.CommonUtil;
 import java.util.function.BiFunction;
-import java.util.function.Function;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 

@@ -13,7 +13,8 @@ import javafx.stage.Stage;
 import java.util.function.UnaryOperator;
 
 /**
- * User: eugen Date: 02.11.14
+ *
+ * @author Tohtetsu Choh
  */
 public class NewClass extends Application {
 

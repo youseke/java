@@ -8,7 +8,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * User: eugen Date: 15.11.14
+ *
+ * @author Tohtetsu Choh
  */
 public class NewClass implements CommonUtil {
 
