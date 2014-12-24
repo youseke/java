@@ -1,7 +1,7 @@
 package ex03_07;
 
 import static ex03_07.CompareOptions.*;
-import ex03_22.Exercise;
+import ex03.CommonUtil;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -14,7 +14,7 @@ import static org.junit.Assert.assertArrayEquals;
  *
  * @author Tohtetsu Choh
  */
-public class NewClass implements Exercise {
+public class NewClass implements CommonUtil {
 
     @Test
     @Override

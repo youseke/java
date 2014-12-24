@@ -17,7 +17,8 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /**
- * User: eugen Date: 22.11.14
+ *
+ * @author Tohtetsu Choh
  */
 public class NewClass extends Application {
 

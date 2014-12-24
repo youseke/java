@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.function.UnaryOperator;
 
 /**
- * User: eugen
- * Date: 10.11.14
+ *
+ * @author Tohtetsu Choh
  */
 public class NewClass extends Application {
 

@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author tohtetsu
+ * @author Tohtetsu Choh
  */
 public class NewClass extends Application {
 

@@ -1,6 +1,6 @@
 package ex04_08;
 
-import ex03_22.Exercise;
+import ex03.CommonUtil;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,7 +16,7 @@ import static org.junit.Assert.assertNotNull;
  *
  * @author Tohtetsu Choh
  */
-public class NewClass implements Exercise, Initializable {
+public class NewClass implements CommonUtil, Initializable {
 
     @FXML
     private Name name;

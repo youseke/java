@@ -1,5 +1,6 @@
 package ex03_22;
 
+import ex03.CommonUtil;
 import org.junit.Test;
 
 import java.util.concurrent.CompletableFuture;
@@ -9,7 +10,7 @@ import java.util.concurrent.Executors;
 /**
  * User: eugen Date: 15.11.14
  */
-public class NewClass implements Exercise {
+public class NewClass implements CommonUtil {
 
     @Test
     @Override

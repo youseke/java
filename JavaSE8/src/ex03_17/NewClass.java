@@ -1,29 +1,54 @@
 package ex03_17;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import ex03.CommonUtil;
 import java.util.function.Consumer;
+import org.junit.Test;
 
 /**
  *
  * @author Tohtetsu Choh
  */
-public class NewClass {
+public class NewClass implements CommonUtil {
 
-    public static void doInParallelAsync(Runnable first, Runnable second, Consumer<Throwable> handler) {
+    @Override
+    @Test
+    public void perform() {
+        doInParallelAsync(
+                () -> {
+                    if (System.currentTimeMillis() % 2 == 1) {
+                        throw new RuntimeException("Exception in First");
+                    } else {
+                        System.out.println("First OK");
+                    }
+                },
+                () -> {
+                    if (System.currentTimeMillis() % 2 == 1) {
+                        throw new RuntimeException("Exception in Second");
+                    } else {
+                        System.out.println("Second OK");
+                    }
+                },
+                (t) -> System.out.println(t.getMessage())
+        );
+    }
+
+    public void doInParallelAsync(Runnable first, Runnable second, Consumer<Throwable> handler) {
         Thread t = new Thread() {
-            @Override
             public void run() {
-                try {
-                    ExecutorService pool = Executors.newCachedThreadPool();
-                    pool.submit(first);
-                    pool.submit(second);
-                    pool.shutdown();
-                    pool.awaitTermination(1, TimeUnit.HOURS);
-                } catch (Throwable t) {
-                    handler.accept(t);
-                }
+                new Thread(() -> {
+                    try {
+                        first.run();
+                    } catch (Throwable t) {
+                        handler.accept(t);
+                    }
+                }).start();
+                new Thread(() -> {
+                    try {
+                        second.run();
+                    } catch (Throwable t) {
+                        handler.accept(t);
+                    }
+                }).start();
             }
         };
         t.start();

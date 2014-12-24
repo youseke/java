@@ -1,4 +1,4 @@
-package ex03_22;
+package ex03;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -8,14 +8,14 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
-public interface Exercise {
+public interface CommonUtil {
 
     void perform();
 
     default List<String> getWordsAsList() {
         String content;
         try {
-            content = new String(Files.readAllBytes(Paths.get(this.getClass().getResource("/alice.txt").toURI())), StandardCharsets.UTF_8);
+            content = new String(Files.readAllBytes(Paths.get(this.getClass().getResource("src/main/resources/alice.txt").toURI())), StandardCharsets.UTF_8);
             return Arrays.asList(content.split("[\\P{L}]+"));
         } catch (URISyntaxException | IOException e) {
             e.printStackTrace();
@@ -26,7 +26,7 @@ public interface Exercise {
     default String[] getWordsAsArray() {
         String content;
         try {
-            content = new String(Files.readAllBytes(Paths.get(this.getClass().getResource("/alice.txt").toURI())), StandardCharsets.UTF_8);
+            content = new String(Files.readAllBytes(Paths.get(this.getClass().getResource("src/main/resources/alice.txt").toURI())), StandardCharsets.UTF_8);
             return content.split("[\\P{L}]+");
         } catch (URISyntaxException | IOException e) {
             e.printStackTrace();
