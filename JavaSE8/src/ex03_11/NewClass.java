@@ -1,5 +1,6 @@
-package ex03_05;
+package ex03_11;
 
+import ex03_05.ColorTransformer;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -9,9 +10,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.util.function.UnaryOperator;
+
 /**
- *
- * @author Tohtetsu Choh
+ * User: eugen Date: 02.11.14
  */
 public class NewClass extends Application {
 
@@ -28,13 +30,22 @@ public class NewClass extends Application {
         return out;
     }
 
+    public static ColorTransformer compose(ColorTransformer first, ColorTransformer second) {
+        return (x, y, c) -> second.apply(x, y, first.apply(x, y, c));
+    }
+
+    public static ColorTransformer map(UnaryOperator<Color> op) {
+        return (x, y, c) -> op.apply(c);
+    }
+
     @Override
     public void start(Stage stage) throws Exception {
         Image image = new Image("queen-mary.png");
-        Image newImage = transform(image,
+        Image newImage = transform(image, compose(map(Color::brighter),
                 (x, y, c) -> (x <= 10 || x >= image.getWidth() - 10
-                || y <= 10 || y >= image.getHeight() - 10) ? Color.GREY : c);
+                || y <= 10 || y >= image.getHeight() - 10) ? Color.GREY : c));
         stage.setScene(new Scene(new HBox(new ImageView(image), new ImageView(newImage))));
         stage.show();
     }
+
 }

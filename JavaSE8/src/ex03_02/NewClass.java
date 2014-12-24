@@ -4,14 +4,12 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  *
- * @author tohtetsu
+ * @author Tohtetsu Choh
  */
 public class NewClass {
 
     public static void main(String[] args) {
-
         ReentrantLock lock = new ReentrantLock();
-
         withLock(lock, () -> {
             System.out.println("This is a test");
         });
