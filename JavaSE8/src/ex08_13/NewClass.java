@@ -53,7 +53,7 @@ public class NewClass extends AbstractProcessor {
     }
 
     private void write(String className, Map<String, List<TestCase>> map) throws IOException {
-        JavaFileObject sourceFile = processingEnv.getFiler().createSourceFile("C8E13Test");
+        JavaFileObject sourceFile = processingEnv.getFiler().createSourceFile("NewClass");
         try (PrintWriter out = new PrintWriter(sourceFile.openWriter())) {
             int i = className.lastIndexOf(".");
             if (i > 0) {
@@ -62,7 +62,7 @@ public class NewClass extends AbstractProcessor {
                 out.println(";");
             }
             out.println("import static " + className + ".*;");
-            out.println("public class C8E13Test {");
+            out.println("public class NewClass {");
             out.println("   public static void main(String[] args) {");
             map.keySet().stream().forEach(m -> map.get(m).stream().forEach(a -> {
                 out.println("       if(" + m + "(" + a.params() + ") == " + a.expected() + ") System.out.println(\"Passed\");");
