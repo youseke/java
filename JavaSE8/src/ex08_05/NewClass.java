@@ -16,7 +16,7 @@ public class NewClass implements CommonUtil {
     public void perform() {
         ArrayList<String> words = new ArrayList<>(getWordsAsList());
         words.removeIf(w -> w.length() <= 12);
-        assertEquals(33, words.size());
+        assertEquals(2, words.size());
     }
 
 }

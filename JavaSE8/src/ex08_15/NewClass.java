@@ -17,7 +17,7 @@ public class NewClass {
     public void perform() {
         try {
             grep(Pattern.compile("(?m)^Alice"),
-                    Paths.get(this.getClass().getResource("/alice.txt").toURI()));
+                    Paths.get(this.getClass().getResource("/main/resources/alice.txt").toURI()));
         } catch (Exception e) {
             e.printStackTrace();
         }

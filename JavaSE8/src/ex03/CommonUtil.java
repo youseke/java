@@ -15,7 +15,7 @@ public interface CommonUtil {
     default List<String> getWordsAsList() {
         String content;
         try {
-            content = new String(Files.readAllBytes(Paths.get(this.getClass().getResource("src/main/resources/alice.txt").toURI())), StandardCharsets.UTF_8);
+            content = new String(Files.readAllBytes(Paths.get(this.getClass().getResource("/main/resources/alice.txt").toURI())), StandardCharsets.UTF_8);
             return Arrays.asList(content.split("[\\P{L}]+"));
         } catch (URISyntaxException | IOException e) {
             e.printStackTrace();
@@ -26,7 +26,7 @@ public interface CommonUtil {
     default String[] getWordsAsArray() {
         String content;
         try {
-            content = new String(Files.readAllBytes(Paths.get(this.getClass().getResource("src/main/resources/alice.txt").toURI())), StandardCharsets.UTF_8);
+            content = new String(Files.readAllBytes(Paths.get(this.getClass().getResource("/main/resources/alice.txt").toURI())), StandardCharsets.UTF_8);
             return content.split("[\\P{L}]+");
         } catch (URISyntaxException | IOException e) {
             e.printStackTrace();
