@@ -6,7 +6,7 @@ for(var key in data){
     pieChartData.add(new PieChart.Data(key, data[key]));
 }
 var chart = new PieChart(pieChartData);
-chart.setTitle("Population of the Continents");
+chart.setTitle("Sales of companies");
 var group = new javafx.scene.Group(chart);
 var scene = new javafx.scene.Scene(group);
 $STAGE.setWidth(500);
