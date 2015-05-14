@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" onMouseClicked="#handleOnMouseClicked" onMouseDragged="#handelOnMouseDragged" onMouseEntered="#handleOnMouseEntered" onMousePressed="#handleOnMousePressed" onMouseReleased="#handleOnMouseReleased" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="digitalclock.controller.DigitalClockController">
+<children><MenuBar fx:id="menuBar" prefHeight="29.0" prefWidth="320.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+  <menus>
+    <Menu fx:id="file" mnemonicParsing="false" text="File">
+      <items>
+        <MenuItem fx:id="close" mnemonicParsing="false" onAction="#closeMenuItemAction" text="Close" />
+      </items>
+    </Menu>
+    <Menu fx:id="tool" mnemonicParsing="false" text="Tools">
+      <items>
+        <MenuItem fx:id="property" mnemonicParsing="false" onAction="#propertyMenuItemAction" text="Property" />
+      </items>
+    </Menu>
+  </menus>
+</MenuBar>
+</children>
+</AnchorPane>

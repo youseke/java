@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="gridPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="215.0" prefWidth="305.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="digitalclock.controller.DialogController">
+<children>
+<Label layoutX="130.853271484375" layoutY="87.0" text="Font" />
+<Label layoutX="130.0" layoutY="199.0" text="Color" GridPane.rowIndex="1" />
+<Label layoutX="130.0" layoutY="250.0" text="Font Size" GridPane.rowIndex="3" />
+<Label text="Background Color" GridPane.rowIndex="2" />
+      <ComboBox fx:id="fontName" prefWidth="150.0" GridPane.columnIndex="1" />
+<ColorPicker fx:id="color" layoutX="85.94873046875" layoutY="148.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+<ColorPicker fx:id="backgroundColor" layoutX="86.3974609375" layoutY="209.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+<Slider fx:id="fontSize" layoutX="104.94873046875" layoutY="285.40000009536743" value="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <Button fx:id="okButton" mnemonicParsing="false" onAction="#okButtonAction" prefHeight="23.0" prefWidth="65.0" text="OK">
+               <HBox.margin>
+                  <Insets left="25.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="23.0" prefWidth="60.0" text="Cancel">
+               <HBox.margin>
+                  <Insets left="25.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+</children>
+<columnConstraints>
+<ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="145.0" />
+<ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="0.0" prefWidth="200.0" />
+</columnConstraints>
+<rowConstraints>
+<RowConstraints maxHeight="74.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
+<RowConstraints maxHeight="133.0" minHeight="0.0" prefHeight="51.0" vgrow="SOMETIMES" />
+<RowConstraints maxHeight="265.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+<RowConstraints maxHeight="405.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="405.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+</rowConstraints>
+</GridPane>
