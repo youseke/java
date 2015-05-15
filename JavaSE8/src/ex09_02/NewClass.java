@@ -142,10 +142,10 @@ public class NewClass {
 		PrintWriter out = null;
 		Exception cachedException = null;
 		try {
-			in = new Scanner(Paths.get(NewClass.class.getResource("/alice.txt")
+			in = new Scanner(Paths.get(NewClass.class.getResource("src/main/resources/alice.txt")
 					.toURI()));
 			try {
-				out = new PrintWriter("/fake/alice.txt");
+				out = new PrintWriter("src/main/resources/fake/alice.txt");
 				while (in.hasNext())
 					out.println(in.next().toLowerCase());
 			} catch (Exception e) {

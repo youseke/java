@@ -9,7 +9,7 @@ public class NewClass {
 	public static void main(String[] args) {
 		try {
 			List<String> lines = Files.readAllLines(Paths.get(NewClass.class
-					.getResource("/alice.txt").toURI()));
+					.getResource("src/main/resources/alice.txt").toURI()));
 			Collections.reverse(lines);
 			Files.write(Paths.get(System.getProperty("java.io.tmpdir"),
 					"alice.txt"), lines);
