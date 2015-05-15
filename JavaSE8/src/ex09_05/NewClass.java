@@ -7,7 +7,7 @@ public class NewClass {
 	public static void main(String[] args) {
 		try {
 			byte[] bytes = Files.readAllBytes(Paths.get(NewClass.class
-					.getResource("/alice.txt").toURI()));
+					.getResource("src/main/resources/alice.txt").toURI()));
 			byte[] reversedBytes = new byte[bytes.length];
 			for (int i = 0, j = bytes.length - 1; i < bytes.length; i++, j--) {
 				reversedBytes[i] = bytes[j];
